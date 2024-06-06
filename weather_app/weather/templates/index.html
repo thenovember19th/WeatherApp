@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Weather in {{ city }}</h1>
+<form method="get" action=".">
+    <input type="text" name="city" placeholder="Enter city" value="{{ city }}">
+    <button type="submit">Search</button>
+</form>
+<div class="weather-info">
+    <p>Temperature: {{ temperature }}°C</p>
+    <p>Wind Speed: {{ wind_speed }} m/s</p>
+    <p>Humidity: {{ humidity }}%</p>
+    <p>Description: {{ description }}</p>
+</div>
+{% endblock %}
